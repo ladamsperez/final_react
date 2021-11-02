@@ -35,7 +35,7 @@ export const getTwitchAppToken = () => {
 };
 
 export const getTwitchUserToken = () => {
-    return Axios.get(`https://id.twitch.tv/oauth2/authorize?client_id=${client_id}&redirect_uri=http://localhost:3000&response_type=code&scope=user:read:follows`)
+    return Axios.get(`https://id.twitch.tv/oauth2/authorize?client_id=${client_id}&redirect_uri=${baseBackendUrl}&response_type=code&scope=user:read:follows`)
         .then(response => {
             return response;
         })

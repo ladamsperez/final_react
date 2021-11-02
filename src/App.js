@@ -1,18 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import {
-  BrowserRouter,
-  Switch,
-  Route,
-  Link,
-} from "react-router-dom";
+import { BrowserRouter, Switch, Route, Link, Redirect } from "react-router-dom";
 import Login from './components/Login';
 import TwitchLogin from './components/TwitchLogin';
 import Logout from './components/Logout';
+import Home from './components/Home';
 import UserPage from './pages/User';
 import axios from 'axios';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTasks } from '@fortawesome/free-solid-svg-icons';
+import { faBroadcastTower } from '@fortawesome/free-solid-svg-icons';
 import { baseBackendUrl } from './urls';
 
 function App() {
@@ -64,14 +61,17 @@ function App() {
               pathname: `/users/${authUser}`,
               state: { fromDashboard: true }
             }}><FontAwesomeIcon icon={faTasks} /></Link>
-
+            <Link to={{ 
+              pathname: `/${authUser}`,
+              state: { fromDashboard: true }
+            }}><FontAwesomeIcon icon={faBroadcastTower} /></Link>
             <Logout setToken={setToken} setMessage={setMessage} setAuthUser={setAuthUser} />
           </div>
           :
           <Login setToken={setToken} setMessage={setMessage}/>
         }
       </Nav>
-
+      
       <Message>
         {message.length > 0 ?
           <>
@@ -85,6 +85,7 @@ function App() {
           ''
         }
       </Message>
+
       <Switch>
 
         <Route
@@ -98,18 +99,28 @@ function App() {
             />
           }
         />
-
         <Route
           path="/users/:user"
           render={
             routerProps =>
             <UserPage
-              username={routerProps}
-              authUser={authUser}
+            username={routerProps}
+            authUser={authUser}
             />
           } 
         />
 
+      <Route
+        path="/:user"
+        render={
+          routerProps =>
+          <Home
+          username={routerProps}
+          authUser={authUser}
+    />
+  }
+/>
+      <Route exact path="/:user">{Login ? <Redirect to="/" /> : <Logout />}</Route>
       </Switch>
 
     </BrowserRouter>
@@ -169,5 +180,6 @@ const Message = styled.div`
     clear: both;
   }
 `
+
 
 export default App;

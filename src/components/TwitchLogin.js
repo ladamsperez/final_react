@@ -23,7 +23,7 @@ const TwitchLogin = ({ params, setToken, setMessage }) => {
         setMessage(['Logging in with twitch...']);
         await axios.post(`${baseBackendUrl}/twitch/connect/`, codeParams)
         .then(res => {
-            console.log('putting token into locaStorage..');
+            // console.log('putting token into locaStorage..');
             let token = localStorage.setItem('token', res.data.key);
             setToken(token);
             setMessage(['Logged in successfully with Twitch!']);

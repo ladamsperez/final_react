@@ -157,22 +157,24 @@ const UserPage = ({ username, authUser }) => {
     )
 }
 
+
 const TaskList = styled.ul`
     display: flex;
     flex-flow: column nowrap;
+    border: 60px
     overflow-x: hidden;
     max-width: 80%;
     margin: auto;
     list-style: none;
     padding-inline-start: 0;
     li {
-        border: 0;
         outline: 0;
-        font-size: 16px;
+        border: none;
+        border-radius: 30px;
+        font-size: 30px;
         margin: 10px auto;
         padding: 16px;
-        background-color: #6441a5;
-        box-shadow: -5px -5px 20px #6441a5,  5px 5px 20px #523687;
+        background-color: #461E52;
         transition: all 0.2s ease-in-out;
         display: flex;
         flex-flow: row wrap;
@@ -197,17 +199,17 @@ const User = styled.div`
         border-radius: 10px;
         font-weight: bold;
         outline: 0;
-        font-size: 16px;
+        font-size: 30px;
         margin: 6px 3px;
         padding: 10px 15px;
-        background-color: #6441a5;
-        box-shadow:-5px -5px 20px #6441a5,  5px 5px 20px #523687;
+
+
         transition: all 0.2s ease-in-out;
-        &:hover {
-            box-shadow: -2px -2px 5px #6441a5, 2px 2px 5px #523687;
-        }
         &:active {
-            box-shadow: inset 1px 1px 2px #523687, inset -1px -1px 2px #6441a5;
+            box-shadow: -2px -2px 5px #461E52, 2px 2px 5px #461E52
+        }
+        &:hover {
+            box-shadow: inset 1px 1px 2px #461E52, inset -1px -1px 2px #461E52;
         }
     }
 `;

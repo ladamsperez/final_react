@@ -55,47 +55,49 @@ const CreateTask = ({ triggerToggle, setMsg }) => {
     );
 }
 
-// form styling inspired by https://codepen.io/swapnet/pen/QWwPVwE
 const Form = styled.form`
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
+    font-size: 30x;
     letter-spacing: -0.2px;
     margin: auto;
+    border-radius: 60px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     button, input {
         border: 0;
         outline: 0;
-        font-size: 16px;
+        font-size: 30px;
         margin: 12px;
         padding: 16px;
-        background-color: #6441a5;
+        background-color: #461E52;
     }
     input {
         border-radius: 35px;
-        box-shadow:  inset 2px 2px 5px #523687, inset -5px -5px 10px #6441a5;
+        box-shadow:  inset 2px 2px 5px #0000, inset -5px -5px 10px #0000;
         box-sizing: border-box;
+        font-size: 30px;
+        color: white;
         transition: all 0.2s ease-in-out;
         appearance: none;
-        -webkit-appearance: none;
         &:focus {
-            box-shadow: inset 1px 1px 2px #523687, inset -1px -1px 2px #6441a5;
+            box-shadow: inset 1px 1px 2px #0000, inset -1px -1px 2px #0000;
         }
     }
     button {
-        color: #131211;
+        color: white;
         border-radius: 9px;
+        font-size: 30px;
         font-weight: bold;
-        box-shadow: -5px -5px 20px #6441a5,  5px 5px 20px #523687;
-        transition: all 0.2s ease-in-out;
+        box-shadow: -5px -5px 20px #0000,  5px 5px 20px #0000;
+        transition: all 0.2s ease-out-in;
         cursor: pointer;
         font-weight: 600;
-        &:hover {
-            box-shadow: -2px -2px 5px #6441a5, 2px 2px 5px #523687;
-        }
         &:active {
-            box-shadow: inset 1px 1px 2px #523687, inset -1px -1px 2px #6441a5;
+            box-shadow: -2px -2px 5px #0000, 2px 2px 5px #0000;
+        &:hover {
+                box-shadow: inset 1px 1px 2px #461E52, inset -1px -1px 2px #461E52;
+        }
         }
     }
 `

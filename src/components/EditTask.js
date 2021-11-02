@@ -51,9 +51,9 @@ const EditTask = ({ taskUrl, description, triggerToggle, setMsg, completed }) =>
 const CompletedTask = styled.p`
     outline: 0;
     border: 0;
-    border-radius: 5px;
+    border-radius: 25px;
     height: 25px;
-    background-color: #6441a5;
+    background-color: #0000;
     padding: 4px;
     margin: 0 5px;
     min-width: 169px;
@@ -62,9 +62,11 @@ const CompletedTask = styled.p`
 const Input = styled.input`
     outline: 0;
     border: 0;
-    border-radius: 5px;
+    border-radius: 25px;
+    font-size: 30px;
+    color: white;
     height: 25px;
-    background-color: #6441a5;
+    background-color: #0000;
     padding: 4px;
     margin: 0 5px;
     &:focus {

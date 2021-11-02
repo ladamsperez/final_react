@@ -7,7 +7,7 @@ import Axios from 'axios';
  const client_id = process.env.REACT_APP_E1337_TWITCH_CLIENT_ID;
  const secret = process.env.REACT_APP_E1337_TWITCH_SECRET;
  const user_id = process.env.REACT_APP_E1337_TWITCH_USER_ID;
-
+ const baseBackendUrl = process.env.REACT_APP_BASE_BACKEND_URL;
 //Twitch required headers.
 const twitchAuthHeaders = (token) => ({
     headers: {

@@ -16,8 +16,9 @@ const Logout = ({ setToken, setMessage, setAuthUser }) => {
     }
 
     return (
+        // eslint-disable-next-line jsx-a11y/anchor-is-valid
         <>
-            <a onClick={handleLogoutClick}><FontAwesomeIcon icon={faSignOutAlt} /></a>
+            <href onClick={handleLogoutClick}><FontAwesomeIcon icon={faSignOutAlt} /></href>
         </>
     )
 }

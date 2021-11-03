@@ -17,7 +17,7 @@ const CompleteTask = ({taskUrl, taskStatus, triggerToggle, setMsg}) => {
             'completed': !taskStatus
         }
     }
-
+// eslint-disable-next-line no-unused-vars
     const buttonStyle = {
         textDecoration: 'line-through',
     }

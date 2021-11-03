@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "3": "^2.1.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
@@ -12,7 +13,9 @@
     "@testing-library/user-event": "^13.5.0",
     "ajax": "^0.0.4",
     "axios": "^0.21.1",
+    "chokidar": "^3.5.2",
     "framer-motion": "^4.1.17",
+    "joi": "^17.4.2",
     "jquery": "^3.6.0",
     "jsx": "^0.9.89",
     "react": "^17.0.2",
@@ -21,10 +24,12 @@
     "react-icons": "^4.3.1",
     "react-infinite-scroll-hook": "^4.0.1",
     "react-router-dom": "^5.3.0",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^4.0.3",
+    "set-value": "^4.1.0",
     "styled-components": "^5.3.3",
-    "web-vitals": "^0.2.4",
-    "yarn": "^1.22.15"
+    "update": "^0.7.4",
+    "upgrade": "^1.1.0",
+    "web-vitals": "^0.2.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -49,8 +54,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-},
-"devDependencies": {
-  "dotenv": "^10.0.0"
-}
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0"
+  }
 }

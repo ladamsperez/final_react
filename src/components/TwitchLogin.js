@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import axios from 'axios';
 import { useHistory } from "react-router-dom";
 import { baseBackendUrl } from '../urls';
@@ -37,6 +37,7 @@ const TwitchLogin = ({ params, setToken, setMessage }) => {
 
     useEffect(() => {
         submitCode();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (

@@ -27,6 +27,7 @@ const UserPage = ({ username, authUser }) => {
         if (token == null) {
             setMsg('');
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [authUser]);
 
     // used for triggering getUserAPI() after CUD requests.
@@ -108,6 +109,7 @@ const UserPage = ({ username, authUser }) => {
             });
         };
         getUserAPI();
+     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [toggle]);
 
     useEffect(() => {

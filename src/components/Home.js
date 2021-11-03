@@ -6,7 +6,7 @@ import { Fade } from "react-awesome-reveal";
 
 const Home = () => {
     const [games, setGames] = useState([]);
-    const [loading, setLoading] = useState(false);
+    const [loading] = useState(false);
     const [page, setPage] = useState('');
 
     useEffect(() => {
@@ -19,6 +19,7 @@ const Home = () => {
                 });
         };
         return () => sessionStorage.removeItem('twitchToken');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     //get Twitch token from Twitch API
@@ -74,14 +75,14 @@ const Home = () => {
                                         </BoxArt>
                                         <GameInfo>
                                             <Name>
-                                                <a href="# ">
+                                            <a href="#/"> 
                                                     <h3>
                                                         {game.name}
                                                     </h3>
                                                 </a>
                                             </Name>
                                             <Viewers>
-                                                <a href="#">
+                                            <a href="#/"> 
                                                     <p>
                                                         {`${game.viewers ? game.viewers : '...'} watchers`}
                                                     </p>
@@ -111,68 +112,68 @@ const Container = styled.main`
 `;
 
 
-const Content = styled.div`  
-    width: 95%;
-    min-height: 80vh;
-    margin-left: ${({ show }) => show ? '215px' : '25px'};
-    transition: margin-left 0.2s;
-    margin-right: 15px;
-`;
+// const Content = styled.div`  
+//     width: 95%;
+//     min-height: 80vh;
+//     margin-left: ${({ show }) => show ? '215px' : '25px'};
+//     transition: margin-left 0.2s;
+//     margin-right: 15px;
+// `;
 
 
 
-//Filter & Sort components
-const Filter = styled.div`
-    display: flex;
-    align-items: center;
-`;
+// //Filter & Sort components
+// const Filter = styled.div`
+//     display: flex;
+//     align-items: center;
+// `;
 
-const Sort = styled(Filter)`
-    padding-right: 10px;
+// const Sort = styled(Filter)`
+//     padding-right: 10px;
     
-    button{
-        width: 100%;
-        max-width: 220px;
-        padding: 0px 0px;
-        border-radius: 4px;
-        background-color: #464648;
-        border: none;
-        color: white;
-        outline: none;
-        font-weight: bold;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+//     button{
+//         width: 100%;
+//         max-width: 220px;
+//         padding: 0px 0px;
+//         border-radius: 4px;
+//         background-color: #464648;
+//         border: none;
+//         color: white;
+//         outline: none;
+//         font-weight: bold;
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//     }
 
-    button:hover{
-        cursor: pointer;
-        background-color: #515152;
-    }
+//     button:hover{
+//         cursor: pointer;
+//         background-color: #515152;
+//     }
 
-    @media (max-width: 720px){
-        padding: 0;
-    }
-`;
+//     @media (max-width: 720px){
+//         padding: 0;
+//     }
+// `;
 
-const Actions = styled.div`
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    font-size: 13px;
-    font-weight: bold;
+// const Actions = styled.div`
+//     color: white;
+//     display: flex;
+//     justify-content: space-between;
+//     font-size: 13px;
+//     font-weight: bold;
 
-    @media (max-width: ${({ show }) => show ? '960px' : '720px'}){
-        flex-direction: column;
+//     @media (max-width: ${({ show }) => show ? '960px' : '720px'}){
+//         flex-direction: column;
 
-        ${Filter}{
-            margin-bottom: 10px;
-        }
+//         ${Filter}{
+//             margin-bottom: 10px;
+//         }
 
-        ${Sort}{
-        }
-    }
-`;
+//         ${Sort}{
+//         }
+//     }
+// `;
 
 
 

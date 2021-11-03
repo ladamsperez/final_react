@@ -7,10 +7,11 @@ import { baseBackendUrl } from '../urls';
 
 
 function Login({ setToken, setMessage }){
-
+    // eslint-disable-next-line no-unused-vars
     const [username, setUsername] = useState('');
+    // eslint-disable-next-line no-unused-vars
     const [password, setPassword] = useState('');
-
+// eslint-disable-next-line no-unused-vars
     const handleLoginSubmit = e => {
         e.preventDefault();
 
@@ -26,6 +27,7 @@ function Login({ setToken, setMessage }){
             setToken(authToken);
 
             // use username from local storage to use outside of url param handling
+            // eslint-disable-next-line no-unused-vars
             let authUser = localStorage.setItem('user', username);
 
             setMessage([`Logged in as ${username}.`]);
